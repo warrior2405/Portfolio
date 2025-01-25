@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms and Condition</title>
+    <link rel="stylesheet" href="../CSS/Contact.css" />
+  </head>
+  <style>
+    .cursor {
+      z-index: 999;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: transparent;
+      border: 2px solid rgba(39, 174, 96, 1);
+      border-radius: 50%;
+      pointer-events: none;
+      box-shadow: 0 0 20px rgba(39, 174, 96, 0.5),
+        0 0 60px rgba(39, 174, 96, 0.3), 0 0 100px rgba(39, 174, 96, 0.1);
+      transform: translate(-50%, -50%);
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+  </style>
+  <body>
+    <div class="cursor"></div>
+    <dl class="main">
+      <dt class="items">Email</dt>
+      <dd>
+        You can reach us at
+        <a href="mailto:contact@example.com">contact@example.com</a> for any
+        inquiries or support.
+      </dd>
+
+      <dt class="items">Phone</dt>
+      <dd>
+        For urgent queries, you can call us at <strong>+123 456 7890</strong>.
+      </dd>
+
+      <dt class="items">Social Media</dt>
+      <dd>
+        Feel free to connect with us on social media platforms:
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+          </li>
+        </ul>
+      </dd>
+
+      <dt class="items">Office Address</dt>
+      <dd>
+        Our office is located at:
+        <strong>123 Portfolio St, City, Country</strong>.
+      </dd>
+    </dl>
+  </body>
+  <script type="text/javascript">
+    const cursor = document.querySelector(".cursor");
+    let timeout;
+
+    document.addEventListener("mousemove", (e) => {
+      let x = e.pageX;
+      let y = e.pageY;
+
+      cursor.style.top = y + "px";
+      cursor.style.left = x + "px";
+      cursor.style.opacity = "1";
+    });
+  </script>
+</html>

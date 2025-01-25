@@ -1,0 +1,40 @@
+@import url("https://fonts.cdnfonts.com/css/allenia");
+* {
+  line-height: 2rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  word-break: keep-all;
+  outline: none;
+  scroll-behavior: smooth;
+  cursor: none;
+  font-family: "allenia";
+}
+
+:root {
+  --bg-color: #191d2b;
+  --text-color: #fff;
+  --main-color: #27ae60;
+  --o-transition: all 0.4s ease-in-out;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.main {
+  font-size: 1rem;
+  margin: 2rem;
+}
+.items {
+    color: var(--main-color);
+}

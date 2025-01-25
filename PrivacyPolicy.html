@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/PrivacyPolicy.css" />
+  </head>
+  <style>
+    .cursor {
+      z-index: 999;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: transparent;
+      border: 2px solid rgba(39, 174, 96, 1);
+      border-radius: 50%;
+      pointer-events: none;
+      box-shadow: 0 0 20px rgba(39, 174, 96, 0.5),
+        0 0 60px rgba(39, 174, 96, 0.3), 0 0 100px rgba(39, 174, 96, 0.1);
+      transform: translate(-50%, -50%);
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+  </style>
+  <body>
+    <div class="cursor"></div>
+    <dl class="main">
+      <dt class="items">Introduction</dt>
+      <dd>
+        This Privacy Policy outlines how we collect, use, and protect your
+        personal information when you visit our portfolio website.
+      </dd>
+
+      <dt class="items">Information We Collect</dt>
+      <dd>
+        We collect information such as your name, email address, and IP address
+        when you fill out forms or interact with our website.
+      </dd>
+
+      <dt class="items">How We Use Your Information</dt>
+      <dd>
+        The information we collect is used to improve user experience, respond
+        to inquiries, and send relevant updates or newsletters (if you opt-in).
+      </dd>
+
+      <dt class="items">Cookies</dt>
+      <dd>
+        Our website uses cookies to enhance user experience. You can control
+        cookie settings in your browser, but disabling them may affect
+        functionality.
+      </dd>
+
+      <dt class="items">Data Security</dt>
+      <dd>
+        We take appropriate security measures to protect your personal data.
+        However, no method of transmission over the Internet is completely
+        secure.
+      </dd>
+
+      <dt class="items">Your Rights</dt>
+      <dd>
+        You have the right to access, update, or delete your personal
+        information. If you have any concerns, please contact us through the
+        details provided below.
+      </dd>
+    </dl>
+  </body>
+  <script type="text/javascript">
+    const cursor = document.querySelector(".cursor");
+    let timeout;
+
+    document.addEventListener("mousemove", (e) => {
+      let x = e.pageX;
+      let y = e.pageY;
+
+      cursor.style.top = y + "px";
+      cursor.style.left = x + "px";
+      cursor.style.opacity = "1";
+    });
+  </script>
+</html>

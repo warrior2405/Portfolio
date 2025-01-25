@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="../CSS/T&C.css" />
+  </head>
+  <style>
+    .cursor {
+      z-index: 999;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: transparent;
+      border: 2px solid rgba(39, 174, 96, 1);
+      border-radius: 50%;
+      pointer-events: none;
+      box-shadow: 0 0 20px rgba(39, 174, 96, 0.5),
+        0 0 60px rgba(39, 174, 96, 0.3), 0 0 100px rgba(39, 174, 96, 0.1);
+      transform: translate(-50%, -50%);
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+  </style>
+  <body>
+    <div class="cursor"></div>
+    <dl class="main">
+      <dt class="items">Acceptance of Terms</dt>
+      <dd>
+        By accessing or using this website, you agree to comply with and be
+        bound by the terms and conditions outlined in this agreement.
+      </dd>
+
+      <dt class="items">Use of Content</dt>
+      <dd>
+        The content on this website, including text, images, and code, is owned
+        by the website owner and may not be reproduced without permission.
+      </dd>
+
+      <dt class="items">Changes to Terms</dt>
+      <dd>
+        We reserve the right to update or change the terms of service at any
+        time. Any changes will be posted on this page, and you are advised to
+        review it periodically.
+      </dd>
+
+      <dt class="items">Limitation of Liability</dt>
+      <dd>
+        We are not liable for any damages or losses resulting from the use of
+        this website or any third-party links provided within.
+      </dd>
+
+      <dt class="items">Governing Law</dt>
+      <dd>
+        These terms shall be governed by and construed in accordance with the
+        laws of the jurisdiction in which the website owner resides.
+      </dd>
+    </dl>
+  </body>
+  <script type="text/javascript">
+    const cursor = document.querySelector(".cursor");
+    let timeout;
+
+    document.addEventListener("mousemove", (e) => {
+      let x = e.pageX;
+      let y = e.pageY;
+
+      cursor.style.top = y + "px";
+      cursor.style.left = x + "px";
+      cursor.style.opacity = "1";
+    });
+  </script>
+</html>
