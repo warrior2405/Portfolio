@@ -84,3 +84,15 @@ if (typeof Typed !== "undefined") {
 } else {
   console.warn("Typed.js is not defined. Ensure it is loaded correctly.");
 }
+
+const cursor = document.querySelector(".cursor");
+let timeout;
+
+document.addEventListener("mousemove", (e) => {
+  let x = e.pageX;
+  let y = e.pageY;
+
+  cursor.style.top = y + "px";
+  cursor.style.left = x + "px";
+  cursor.style.opacity = "1";
+});
