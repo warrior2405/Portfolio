@@ -5,23 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
     <link rel="stylesheet" href="../CSS/T&C.css" />
+    <link rel="stylesheet" href="../CSS/cursor.css" />
   </head>
-  <style>
-    .cursor {
-      z-index: 999;
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      background: transparent;
-      border: 2px solid rgba(39, 174, 96, 1);
-      border-radius: 50%;
-      pointer-events: none;
-      box-shadow: 0 0 20px rgba(39, 174, 96, 0.5),
-        0 0 60px rgba(39, 174, 96, 0.3), 0 0 100px rgba(39, 174, 96, 0.1);
-      transform: translate(-50%, -50%);
-      transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-  </style>
   <body>
     <div class="cursor"></div>
     <dl class="main">
@@ -57,17 +42,5 @@
       </dd>
     </dl>
   </body>
-  <script type="text/javascript">
-    const cursor = document.querySelector(".cursor");
-    let timeout;
-
-    document.addEventListener("mousemove", (e) => {
-      let x = e.pageX;
-      let y = e.pageY;
-
-      cursor.style.top = y + "px";
-      cursor.style.left = x + "px";
-      cursor.style.opacity = "1";
-    });
-  </script>
+  <script src="../JAVASCRIPT/script.js  "></script>
 </html>
