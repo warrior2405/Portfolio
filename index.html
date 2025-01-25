@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mokshil Shah</title>
+    <!--Box Size Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- This is how you include external css -->
+    <link rel="stylesheet" href="../CSS/Main.css" />
+  </head>
+  <style>
+    .cursor {
+      z-index: 999;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: transparent;
+      border: 2px solid rgba(39, 174, 96, 1);
+      border-radius: 50%;
+      pointer-events: none;
+      box-shadow: 0 0 20px rgba(39, 174, 96, 0.5),
+        0 0 60px rgba(39, 174, 96, 0.3), 0 0 100px rgba(39, 174, 96, 0.1);
+      transform: translate(-50%, -50%);
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+  </style>
+  <body>
+    <div class="cursor"></div>
+    <!--header design-->
+    <header class="header">
+      <a href="#" class="logo">Portfolio</a>
+      <i class="bx bx-menu" id="menu-icon"></i>
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#project">My Portfolio</a>
+        <a href="#contact">Contact Me</a>
+      </nav>
+    </header>
+    <!--Home section design-->
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3>Hello, It's Me</h3>
+        <h1>Mokshil Shah</h1>
+        <h3>And I'm a <span class="multiple-text"></span></h3>
+        <h2>
+          Full stack is the best of both worlds, utilizing both skills from
+          front-end and back-end development. Utilizing their knowledge of
+          coding programs, full stack developers collaborate with graphic
+          designers to create the front-end of the website or software to match
+          the company's tone and brand.
+        </h2>
+      </div>
+
+      <div class="home-img">
+        <img src="../Images/3.jpg" alt="" />
+      </div>
+    </section>
+    <!--About Section-->
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="../Images/developer.gif" alt="" />
+      </div>
+      <div class="about-content">
+        <h2 class="heading">About <span>Me</span></h2>
+        <h1>Full Stack Developer!</h1>
+        <h2>
+          A versatile full-stack developer proficient in Java and Python, adept
+          at creating end-to-end solutions that seamlessly blend front-end user
+          experiences with robust back-end functionalities. An experienced Java
+          developer and Python programmer with a holistic skill set as a
+          full-stack developer, capable of crafting dynamic web applications,
+          APIs, and databases to deliver comprehensive software solutions.
+        </h2>
+        <a href="#" class="btn"> Read More</a>
+      </div>
+    </section>
+    <!--Services Section-->
+    <section class="services" id="services">
+      <h2 class="heading">Our <span>Services</span></h2>
+      <div class="services-container">
+        <div class="services-box">
+          <i class="fa-solid fa-code"></i>
+          <h3>Web Development</h3>
+          <p>
+            Writing designed, testable, efficient code by using best software
+            development practices. Creating website layout/user interfaces by
+            using standard HTML/CSS practices.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+
+        <div class="services-box">
+          <i class="fa-brands fa-java"></i>
+          <h3>Java Developer</h3>
+          <p>
+            A Java developer is a highly skilled individual who can build highly
+            efficient enterprise applications and can also work on software
+            analysis and troubleshooting.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+
+        <div class="services-box">
+          <i class="fa-brands fa-python"></i>
+          <h3>Python Programmer</h3>
+          <p>
+            Python developers build, debug, and implement application projects
+            using the Python programming language and focus on writing
+            server-side web application logic.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+      </div>
+    </section>
+    <!--Projects section-->
+    <section class="project" id="project">
+      <h2 class="heading">My <span>Portfolio</span></h2>
+      <div class="project-container">
+        <div class="project-box">
+          <img src="../Images/portfolio1.jpg" alt="" />
+          <div class="project-layer">
+            <h4>Sports Equipments</h4>
+            <p>
+              It's primarily implemented using django ,HTML and CSS(Bootstrap).
+            </p>
+            <a href="https://github.com/warrior2405"
+              ><i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="project-box">
+          <img src="../Images/portfolio2.jpg" alt="" />
+          <div class="project-layer">
+            <h4>Bank Management System</h4>
+            <p>It's primarily implemented using Java and MYSQL.</p>
+            <a href="https://github.com/warrior2405"
+              ><i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="project-box">
+          <img src="../Images/portfolio3.jpg" alt="" />
+          <div class="project-layer">
+            <h4>Naive Baker</h4>
+            <p>It helps you to cook a delicious dish .</p>
+            <a href="https://github.com/warrior2405"
+              ><i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="project-box">
+          <img src="../Images/portfolio4.jpg" alt="" />
+          <div class="project-layer">
+            <h4>Hospital Management</h4>
+            <p>
+              This provides functionality for booking appointments, managing
+              patient and doctor information.
+            </p>
+            <a href="https://github.com/warrior2405"
+              ><i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="project-box">
+          <img src="../Images/portfolio5.jpg" alt="" />
+          <div class="project-layer">
+            <h4>Testability Hardware Security</h4>
+            <p>Project preventing Hardware Attacks.</p>
+            <a href="https://github.com/warrior2405"
+              ><i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="project-box">
+          <img src="../Images/portfolio6.jpg" alt="" />
+          <div class="project-layer">
+            <h4>WildFlower Adventures</h4>
+            <p>It is similar to Make My Trip</p>
+            <a href="https://github.com/warrior2405"
+              ><i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Contact Me section-->
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me</span></h2>
+      <form action="#">
+        <div class="input-box">
+          <input type="text" placeholder="Full Name" />
+          <input type="email" placeholder="Email Address" />
+        </div>
+        <div class="input-box">
+          <input type="text" placeholder="Mobile Number" />
+          <input type="text" placeholder="Email Subject" />
+        </div>
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="Your Message"
+        ></textarea>
+        <input type="submit" value="Send Message" class="btn" />
+      </form>
+      <div
+        class="slider"
+        style="--height: 70px; --width: 100px; --quantity: 10"
+      >
+        <div class="list">
+          <div class="icons">
+            <a
+              href="https://www.linkedin.com/in/mokshil-shah-3057012a2/"
+              class="item icons_btn"
+              style="--position: 1"
+              target="_blank"
+              title="LinkedIn"
+              aria-label="LinkedIn"
+            >
+              <span class="fab fa-linkedin"></span>
+            </a>
+            <a
+              href="https://github.com/warrior2405"
+              class="item icons_btn"
+              style="--position: 2"
+              target="_blank"
+              title="GitHub"
+              aria-label="GitHub"
+            >
+              <span class="fab fa-github"></span>
+            </a>
+            <a
+              href="https://www.reddit.com/user/Valuable_Welcome1351/"
+              class="item icons_btn"
+              style="--position: 3"
+              target="_blank"
+              title="Reddit"
+              aria-label="Reddit"
+            >
+              <span class="fab fa-reddit-alien"></span>
+            </a>
+            <a
+              href="https://www.instagram.com/mokshil2405?igsh=MXJ2ZGN1MGkzcGV0cw=="
+              class="item icons_btn"
+              style="--position: 4"
+              target="_blank"
+              title="Instagram"
+              aria-label="Instagram"
+            >
+              <span class="fab fa-instagram"></span>
+            </a>
+            <a
+              href="https://t.me/DEVLEVELOLUP"
+              class="item icons_btn"
+              style="--position: 5"
+              target="_blank"
+              title="Telegram"
+              aria-label="Telegram"
+            >
+              <span class="fab fa-telegram"></span>
+            </a>
+            <a
+              href="mailto:mokshil.shah.btec.it@gmail.com?subject=Query%20about%20your%20services"
+              class="item icons_btn"
+              style="--position: 6"
+              target="_blank"
+              title="Google"
+              aria-label="Google"
+            >
+              <span class="fab fa-google"></span>
+            </a>
+            <a
+              href="https://www.hackerrank.com/mokshilshah"
+              class="item icons_btn"
+              style="--position: 7"
+              target="_blank"
+              title="HackerRank"
+              aria-label="HackerRank"
+            >
+              <span class="fab fa-hackerrank"></span>
+            </a>
+            <a
+              href="https://chat.whatsapp.com/Bzj5xp1IPnhH0Lh22quasr"
+              class="item icons_btn"
+              style="--position: 8"
+              target="_blank"
+              title="Whatsapp"
+              aria-label="Whatsapp"
+            >
+              <span class="fab fa-whatsapp"></span>
+            </a>
+            <a
+              href="https://discord.gg/vkek87wd"
+              class="item icons_btn"
+              style="--position: 9"
+              target="_blank"
+              title="Discord"
+              aria-label="Discord"
+            >
+              <span class="fab fa-discord"></span>
+            </a>
+            <a
+              href="https://www.figma.com/files/team/1371867070189758085/user/1371867067898896186?fuid=1371867067898896186"
+              class="item icons_btn"
+              style="--position: 10"
+              target="_blank"
+              title="Figma"
+              aria-label="Figma"
+            >
+              <span class="fab fa-figma"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Footer-->
+    <section>
+      <footer>
+        <div class="footer-container">
+          <p><span> © </span> 2025 Mokshil Shah. All Rights Reserved.</p>
+          <ul class="footer-links">
+            <li><a href="../HTML/PrivacyPolicy.html">Privacy Policy</a></li>
+            <li><a href="T&C.html">Terms of Service</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </footer>
+    </section>
+    <!-- <a href="#home"></a> -->
+    <button
+      id="scrollToTopBtn"
+      class="fa-solid fa-arrow-up"
+      style="display: none"
+    ></button>
+
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Typed Js -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- This is how you include external js -->
+    <script src="../JAVASCRIPT/Main.js  "></script>
+    <script type="text/javascript">
+      const cursor = document.querySelector(".cursor");
+      let timeout;
+
+      document.addEventListener("mousemove", (e) => {
+        let x = e.pageX;
+        let y = e.pageY;
+
+        cursor.style.top = y + "px";
+        cursor.style.left = x + "px";
+        cursor.style.opacity = "1";
+      });
+    </script>
+  </body>
+</html>
