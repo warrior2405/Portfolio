@@ -37,7 +37,7 @@ body::-webkit-scrollbar {
 }
 
 .items {
-    color: var(--main-color);
+  color: var(--main-color);
 }
 
 a:link,
