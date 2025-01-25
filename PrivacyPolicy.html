@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../CSS/PrivacyPolicy.css" />
+    <link rel="stylesheet" href="../CSS/cursor.css" />
   </head>
   <style>
     .cursor {
@@ -65,17 +66,5 @@
       </dd>
     </dl>
   </body>
-  <script type="text/javascript">
-    const cursor = document.querySelector(".cursor");
-    let timeout;
-
-    document.addEventListener("mousemove", (e) => {
-      let x = e.pageX;
-      let y = e.pageY;
-
-      cursor.style.top = y + "px";
-      cursor.style.left = x + "px";
-      cursor.style.opacity = "1";
-    });
-  </script>
+  <script src="../JAVASCRIPT/script.js  "></script>
 </html>
