@@ -35,6 +35,14 @@ body::-webkit-scrollbar {
   font-size: 1rem;
   margin: 2rem;
 }
+
 .items {
     color: var(--main-color);
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: var(--main-color);
 }
