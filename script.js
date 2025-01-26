@@ -1,98 +1,85 @@
-// Navbar Toggle
-const menuIcon = document.querySelector("#menu-icon");
-const navbar = document.querySelector(".navbar");
+// toggle icon navbar
 
-if (menuIcon && navbar) {
-  menuIcon.addEventListener("click", () => {
-    menuIcon.classList.toggle("bx-x");
-    navbar.classList.toggle("active");
-  });
-}
+let menuIcon = document.querySelector("#menu-icon");
+let navbar = document.querySelector(".navbar");
 
-// Scroll Sections Active Link
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll("header nav a");
+menuIcon.onclick = () => {
+  menuIcon.classList.toggle("bx-x");
+  navbar.classList.toggle("active");
+};
 
-window.addEventListener("scroll", () => {
-  const top = window.scrollY;
+// scroll sections active link
 
-  // Highlight active navigation link
-  sections.forEach((section) => {
-    const offset = section.offsetTop - 150;
-    const height = section.offsetHeight;
-    const id = section.getAttribute("id");
+let sections = document.querySelectorAll("section");
+let navlinks = document.querySelectorAll("header nav a");
+
+window.onscroll = () => {
+  sections.forEach((sec) => {
+    let top = window.scrollY;
+    let offset = sec.offsetTop - 150;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute("id");
 
     if (top >= offset && top < offset + height) {
-      navLinks.forEach((link) => link.classList.remove("active"));
-      const activeLink = document.querySelector(`header nav a[href*="${id}"]`);
-      if (activeLink) activeLink.classList.add("active");
+      navlinks.forEach((links) => {
+        links.classList.remove("active");
+        document
+          .querySelector("header nav a[href*=" + id + "]")
+          .classList.add("active");
+      });
     }
   });
 
-  // Sticky Header
-  const header = document.querySelector("header");
-  if (header) {
-    header.classList.toggle("sticky", top > 100);
-  }
+  // sticky navbar
+  let header = document.querySelector("header");
 
-  // Close Navbar on Scroll
-  if (menuIcon && navbar) {
-    menuIcon.classList.remove("bx-x");
-    navbar.classList.remove("active");
-  }
+  header.classList.toggle("sticky", window.scrollY > 100);
+
+  // remove toogle icon and navbar when click on navbar link (scroll)
+
+  menuIcon.classList.remove("bx-x");
+  navbar.classList.remove("active");
+};
+
+// Scroll reveal
+
+ScrollReveal({
+  // reset : true,
+  distance: "80px",
+  duration: 2000,
+  delay: 200,
 });
 
-// ScrollToTop Button Functionality
-const scrollToTopBtn = document.querySelector("#scrollToTopBtn");
+ScrollReveal().reveal(".home-content,.heading", { origin: "top" });
+ScrollReveal().reveal(
+  ".home-img,.services-container,.project-box,.contact form",
+  { origin: "bottom" }
+);
+ScrollReveal().reveal(".home-content h1,.about-img", { origin: "left" });
+ScrollReveal().reveal(".home-content,.about-content", { origin: "right" });
 
-// Show or hide the button based on scroll position
-window.addEventListener("scroll", () => {
-  if (
-    document.body.scrollTop > 100 ||
-    document.documentElement.scrollTop > 100
-  ) {
-    scrollToTopBtn.style.display = "block";
-  } else {
-    scrollToTopBtn.style.display = "none";
-  }
+// typed js
+
+const typed = new Typed(".multiple-text", {
+  strings: ["Full Stack Developer", "Java Developer", "Python Programmer"],
+  typeSpeed: 100,
+  backSpeed: 100,
+  backDelay: 1000,
+  loop: true,
 });
 
-// Scroll to top smoothly when the button is clicked
-if (scrollToTopBtn) {
-  scrollToTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
+// Custom Cursor Effect (Optional Feature)
+const cursor = document.querySelector(".cursor");
+if (cursor) {
+  document.addEventListener("mousemove", (e) => {
+    requestAnimationFrame(() => {
+      cursor.style.top = `${e.pageY}px`;
+      cursor.style.left = `${e.pageX}px`;
+      cursor.style.opacity = "1";
     });
   });
-}
 
-// Typed.js Animations
-if (typeof Typed !== "undefined") {
-  const typedStrings = [
-    "Full Stack Developer",
-    "Java Developer",
-    "Python Programmer",
-  ];
-  new Typed(".multiple-text", {
-    strings: typedStrings,
-    typeSpeed: 100,
-    backSpeed: 100,
-    backDelay: 1000,
-    loop: true,
+  document.addEventListener("mouseleave", () => {
+    cursor.style.opacity = "0";
   });
-} else {
-  console.warn("Typed.js is not defined. Ensure it is loaded correctly.");
 }
-
-const cursor = document.querySelector(".cursor");
-let timeout;
-
-document.addEventListener("mousemove", (e) => {
-  let x = e.pageX;
-  let y = e.pageY;
-
-  cursor.style.top = y + "px";
-  cursor.style.left = x + "px";
-  cursor.style.opacity = "1";
-});
