@@ -118,7 +118,7 @@ span {
 
 .icons {
   padding: 2%;
-  margin: 1% 0 0 0;
+  margin: auto 0;
   flex-wrap: wrap;
   display: flex;
   justify-content: space-evenly;
@@ -136,7 +136,7 @@ span {
   color: var(--main-color);
   /* cursor: pointer; */
   align-content: center;
-  font-size: 4em;
+  font-size: 3rem;
   border: hidden;
 }
 
